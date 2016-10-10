@@ -11,17 +11,17 @@ Pod::Spec.new do |s|
                    or other resources are needed.
                    DESC
 
-  s.homepage     = "https://github.com/wimagguc/ios-custom-alertview"
-  s.screenshots  = "https://github.com/wimagguc/ios-custom-alertview/raw/master/Docs/screen.png"
+  s.homepage     = "https://github.com/heartasice/ios-custom-alertview"
+  s.screenshots  = "https://github.com/heartasice/ios-custom-alertview/raw/master/Docs/screen.png"
 
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
 
-  s.author             = { "Richard Dancsi" => "wimagguc@gmail.com" }
-  s.social_media_url   = "http://twitter.com/wimagguc"
+  s.author             = { "Eric Che" => "heartasice@gmail.com" }
+  s.social_media_url   = ""
 
   s.platform     = :ios
 
-  s.source       = { :git => "https://github.com/wimagguc/ios-custom-alertview.git", :tag => "0.9.5" }
+  s.source       = { :git => "https://github.com/heartasice/ios-custom-alertview.git", :tag => "0.9.5" }
 
   s.source_files  = "CustomIOSAlertView/CustomIOSAlertView/View/**/*.{h,m}"
 
