@@ -47,3 +47,9 @@
 - (void)dealloc;
 
 @end
+@interface CloseButtonConfiguration : NSObject
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) UIColor *normalColor;
+@property (strong, nonatomic) UIColor *highlightColor;
+@property (strong, nonatomic) UIFont *font;
+@end

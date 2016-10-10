@@ -45,7 +45,12 @@
     [alertView setContainerView:[self createDemoView]];
 
     // Modify the parameters
-    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Close1", @"Close2", @"Close3", nil]];
+    CloseButtonConfiguration *con=[[CloseButtonConfiguration alloc]init];
+    con.title=@"Close";
+    con.normalColor=[UIColor yellowColor];
+    con.highlightColor=[UIColor grayColor];
+    con.font=[UIFont boldSystemFontOfSize:10];
+    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:con, nil]];
     [alertView setDelegate:self];
     
     // You may use a Block, rather than a delegate.

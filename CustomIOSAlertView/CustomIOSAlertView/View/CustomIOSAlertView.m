@@ -252,7 +252,8 @@ CGFloat buttonSpacerHeight = 0;
     CGFloat buttonWidth = container.bounds.size.width / [buttonTitles count];
 
     for (int i=0; i<[buttonTitles count]; i++) {
-
+        CloseButtonConfiguration *buttonConfiguration=[buttonTitles objectAtIndex:i];
+       
         UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
         [closeButton setFrame:CGRectMake(i * buttonWidth, container.bounds.size.height - buttonHeight, buttonWidth, buttonHeight)];
@@ -260,10 +261,10 @@ CGFloat buttonSpacerHeight = 0;
         [closeButton addTarget:self action:@selector(customIOS7dialogButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [closeButton setTag:i];
 
-        [closeButton setTitle:[buttonTitles objectAtIndex:i] forState:UIControlStateNormal];
-        [closeButton setTitleColor:[UIColor colorWithRed:0.0f green:0.5f blue:1.0f alpha:1.0f] forState:UIControlStateNormal];
-        [closeButton setTitleColor:[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:0.5f] forState:UIControlStateHighlighted];
-        [closeButton.titleLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
+        [closeButton setTitle:buttonConfiguration.title forState:UIControlStateNormal];
+        [closeButton setTitleColor:buttonConfiguration.normalColor forState:UIControlStateNormal];
+        [closeButton setTitleColor:buttonConfiguration.highlightColor forState:UIControlStateHighlighted];
+        [closeButton.titleLabel setFont:buttonConfiguration.font];
         closeButton.titleLabel.numberOfLines = 0;
         closeButton.titleLabel.textAlignment = NSTextAlignmentCenter;
         [closeButton.layer setCornerRadius:kCustomIOSAlertViewCornerRadius];
@@ -457,5 +458,33 @@ CGFloat buttonSpacerHeight = 0;
         [self close];
     }
 }
+-(UIColor *)convertStringToColor :(NSDictionary *)dicname :(NSString *)keyname
+{
+    CIColor *coreColor = [CIColor colorWithString:[dicname valueForKey:keyname]];
+    UIColor *color = [UIColor colorWithRed:coreColor.red green:coreColor.green blue:coreColor.blue alpha:coreColor.alpha];
+    //NSLog(@"color name :%@",color);
+    return color;
+}
+@end
+@implementation CloseButtonConfiguration
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:self.title forKey:@"title"];
+    [encoder encodeObject:self.normalColor forKey:@"normalColor"];
+    [encoder encodeObject:self.highlightColor forKey:@"highlightColor"];
+    [encoder encodeObject:self.font forKey:@"font"];
+}
 
+- (id)initWithCoder:(NSCoder *)decoder
+{
+    if (self = [super init])
+    {
+        
+        self.title = [decoder decodeObjectForKey:@"title"];
+        self.normalColor = [decoder decodeObjectForKey:@"normalColor"];
+        self.highlightColor = [decoder decodeObjectForKey:@"highlightColor"];
+        self.font = [decoder decodeObjectForKey:@"font"];
+    }
+    return self;
+}
 @end

@@ -18,9 +18,12 @@
 		5EB26D0317EC642000F0971C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB26D0217EC642000F0971C /* Images.xcassets */; };
 		5EE9A9BB17EC68960031B75E /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9A9BA17EC68960031B75E /* CustomIOSAlertView.m */; };
 		5EE9A9BE17EC7EA60031B75E /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE9A9BD17EC7EA60031B75E /* demo.png */; };
+		E63783F8145009C5462F2C84 /* libPods-CustomIOSAlertView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F882714D2D54503AAA592A1 /* libPods-CustomIOSAlertView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EB111643929BFAE0DA324CE /* Pods-CustomIOSAlertView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomIOSAlertView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomIOSAlertView/Pods-CustomIOSAlertView.release.xcconfig"; sourceTree = "<group>"; };
+		1F882714D2D54503AAA592A1 /* libPods-CustomIOSAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomIOSAlertView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB26CC717EC5EEA00F0971C /* CustomIOSAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomIOSAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB26CCA17EC5EEB00F0971C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EB26CCC17EC5EEB00F0971C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -38,6 +41,7 @@
 		5EE9A9B917EC68960031B75E /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
 		5EE9A9BA17EC68960031B75E /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
 		5EE9A9BD17EC7EA60031B75E /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo.png; sourceTree = "<group>"; };
+		F69DB87678AF8A2A7F48EAAB /* Pods-CustomIOSAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomIOSAlertView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomIOSAlertView/Pods-CustomIOSAlertView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 				5EB26CCD17EC5EEB00F0971C /* CoreGraphics.framework in Frameworks */,
 				5EB26CCF17EC5EEB00F0971C /* UIKit.framework in Frameworks */,
 				5EB26CCB17EC5EEB00F0971C /* Foundation.framework in Frameworks */,
+				E63783F8145009C5462F2C84 /* libPods-CustomIOSAlertView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,7 @@
 				5EB26CD017EC5EEB00F0971C /* CustomIOSAlertView */,
 				5EB26CC917EC5EEA00F0971C /* Frameworks */,
 				5EB26CC817EC5EEA00F0971C /* Products */,
+				E91365E26145FED6CBAFB74C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +83,7 @@
 				5EB26CCA17EC5EEB00F0971C /* Foundation.framework */,
 				5EB26CCC17EC5EEB00F0971C /* CoreGraphics.framework */,
 				5EB26CCE17EC5EEB00F0971C /* UIKit.framework */,
+				1F882714D2D54503AAA592A1 /* libPods-CustomIOSAlertView.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +132,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E91365E26145FED6CBAFB74C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F69DB87678AF8A2A7F48EAAB /* Pods-CustomIOSAlertView.debug.xcconfig */,
+				0EB111643929BFAE0DA324CE /* Pods-CustomIOSAlertView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB26CFC17EC5EEB00F0971C /* Build configuration list for PBXNativeTarget "CustomIOSAlertView" */;
 			buildPhases = (
+				4AF8B2285BA3B18BD9DCBE2A /* [CP] Check Pods Manifest.lock */,
 				5EB26CC317EC5EEA00F0971C /* Sources */,
 				5EB26CC417EC5EEA00F0971C /* Frameworks */,
 				5EB26CC517EC5EEA00F0971C /* Resources */,
+				E05B26D75D331DBC21702EED /* [CP] Embed Pods Frameworks */,
+				5CDF145793A5F9B26303B9B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,6 +204,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AF8B2285BA3B18BD9DCBE2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CDF145793A5F9B26303B9B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomIOSAlertView/Pods-CustomIOSAlertView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05B26D75D331DBC21702EED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomIOSAlertView/Pods-CustomIOSAlertView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EB26CC317EC5EEA00F0971C /* Sources */ = {
@@ -295,6 +362,7 @@
 		};
 		5EB26CFD17EC5EEB00F0971C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F69DB87678AF8A2A7F48EAAB /* Pods-CustomIOSAlertView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -310,6 +378,7 @@
 		};
 		5EB26CFE17EC5EEB00F0971C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB111643929BFAE0DA324CE /* Pods-CustomIOSAlertView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
