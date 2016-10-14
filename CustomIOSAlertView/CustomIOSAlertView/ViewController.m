@@ -43,7 +43,7 @@
 
     // Add some custom content to the alert view
     [alertView setContainerView:[self createDemoView]];
-
+    alertView.dialogColor=[UIColor greenColor];
     // Modify the parameters
     CloseButtonConfiguration *con=[[CloseButtonConfiguration alloc]init];
     con.title=@"Close";
@@ -78,7 +78,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
     [imageView setImage:[UIImage imageNamed:@"demo"]];
     [demoView addSubview:imageView];
-
+    
     return demoView;
 }
 
