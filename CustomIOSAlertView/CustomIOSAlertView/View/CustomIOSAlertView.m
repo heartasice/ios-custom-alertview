@@ -154,7 +154,7 @@ CGFloat buttonSpacerHeight = 0;
 - (void)customIOS7dialogButtonTouchUpInside: (CustomIOSAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSLog(@"Button Clicked! %d, %d", (int)buttonIndex, (int)[alertView tag]);
-    [self close];
+//    [self close];
 }
 
 // Dialog close animation then cleaning and removing the view from the parent
