@@ -47,7 +47,7 @@ CGFloat buttonSpacerHeight = 0;
         delegate = self;
         useMotionEffects = false;
         closeOnTouchUpOutside = false;
-        buttonTitles = @[@"Close"];
+//        buttonTitles = @[@"Close"];
         
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 
